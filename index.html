@@ -60,7 +60,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <!-- <span class="link-block">
-                <a href="https://github.com/Necolizer/ISTA-Net"
+                <a href="https://github.com/fanglaosi/Skeleton-in-Context"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -69,7 +69,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2307.07469"
+                <a href="https://arxiv.org/pdf/2312.03703.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -116,7 +116,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -130,7 +130,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -141,20 +141,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recognizing interactive action plays an important role in human-robot interaction and collaboration. 
-            Previous methods use late fusion and co-attention mechanism to capture interactive relations, which have limited learning capability or inefficiency to adapt to more interacting entities. 
-            With assumption that priors of each entity are already known, they also lack evaluations on a more general setting addressing the diversity of subjects. 
+            In-context learning provides a new perspective for multi-task modeling for vision and NLP.
+            Under this setting, the model can perceive tasks from prompts and accomplish them without any extra task-specific head predictions or model finetuning.
+            However, Skeleton sequence modeling via in-context learning remains unexplored.
+            Directly applying existing in-context models from other areas onto skeleton sequences fails due to the inter-frame and cross-task pose similarity that makes it outstandingly hard to perceive the task correctly from a subtle context.
           </p>
           <p>
-            To address these problems, we propose an <span class="highlight">Interactive Spatiotemporal Token Attention Network (ISTA-Net)</span>, which simultaneously model spatial, temporal, and interactive relations. 
-            Specifically, our network contains a tokenizer to partition Interactive Spatiotemporal Tokens (ISTs), which is a unified way to represent motions of multiple diverse entities. 
-            By extending the entity dimension, ISTs provide better interactive representations. 
-            To jointly learn along three dimensions in ISTs, multi-head self-attention blocks integrated with 3D convolutions are designed to capture inter-token correlations. 
-            When modeling correlations, a strict entity ordering is usually irrelevant for recognizing interactive actions. 
-            To this end, Entity Rearrangement is proposed to eliminate the orderliness in ISTs for interchangeable entities. 
-          </p>
-          <p>
-            Extensive experiments on four datasets verify the effectiveness of ISTA-Net by outperforming state-of-the-art methods.
+            To address this challenge, we propose Skeleton-in-Context (SiC), an effective framework for in-context skeleton sequence modeling. Our SiC is able to handle multiple skeleton-based tasks simultaneously after a single training process and accomplish each task from context according to the given prompt. It can further generalize to new, unseen tasks according to customized prompts.
+            To facilitate context perception, we additionally propose a task-unified prompt, which adaptively learns tasks of different natures, such as partial joint-level generation, sequence-level prediction, or 2D-to-3D motion prediction.
+            We conduct extensive experiments to evaluate the effectiveness of our SiC on multiple tasks, including motion prediction, pose estimation, joint completion, and future pose estimation. We also evaluate its generalization capability on unseen tasks such as motion-in-between. These experiments show that our model achieves state-of-the-art multi-task performance and even outperforms single-task methods on certain tasks.
           </p>
         </div>
       </div>
