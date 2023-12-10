@@ -134,19 +134,15 @@
       <div class="column is-four-fifths">
 
         <h2 class="title is-3">Skeleton-in-Context</h2>
-
         <img id="teaser" src="./static/media/Framework_00.jpg" alt="Teaser Image" height="100%">
-
-
         <div class="content has-text-justified">
           <b>Overall framework of our Skeleton-in-Context.</b> Specifically, we establish a skeleton bank by integrating training sets under different tasks, which contain a large amount of input-target pairs performing different tasks.
           Next, we randomly select a sample pair as the task-guided prompt (TGP) and a query input from the skeleton bank, undergo encoding, and concatenating, respectively, and then input them into the transformer in parallel. 
           In particular, during this process, the query input and task-unified prompt (TUP) are combined to form a new query. After iterating n1 times, the TGP and query are aggregated through aggregation function and then input into the transformer for n2 iterations. 
           Lastly, the second half of the model output is used as our prediction.
         </div>
+
         
-
-
         <br><br>
 
 
@@ -170,11 +166,12 @@
             </ul>
         </div>
 
+        
+        <br><br>
 
-
+        
         <h2 class="title is-3">Visualization</h2>
         <div class="content has-text-justified">
-          <br>
           <b>In-context demo</b>
           <br>
           In-context inference demo, including pose estimation, future pose estimation, joint completion, and motion prediction.
